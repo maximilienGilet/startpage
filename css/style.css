@@ -3,6 +3,7 @@ html{
     font-family: 'Roboto Condensed', sans-serif;
     line-height: 240%;
     font-size: 14px;
+    font-size: 1.1vw;
 }
 
 .container-fluid{
@@ -11,6 +12,7 @@ html{
 
 .center{
     text-align: center;
+    margin-top: 20vh;
 }
 
 .search input{

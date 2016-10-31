@@ -21,7 +21,9 @@
 
 <!-- Search script -->
 <script>
+
     var searchbox = document.querySelector('#searchbox');
+    // search when enter is pressed
     searchbox.addEventListener('keypress', function (e) {
         var key = e.which || e.keyCode;
         if (key === 13) { // 13 is enter
@@ -29,8 +31,34 @@
         }
     });
 
+    // search function
     function search(query) {
-        window.location.href = "https://www.google.fr/#safe=on&q=" + query;
+        provider = query.split(" ")[0];
+        var search = query.split(" ").splice(1).join(" ");
+        switch (provider) {
+            // YouTube
+            case "!y":
+                window.location.href = "https://www.youtube.com/results?search_query=" + search;
+                break;
+            // Google news
+            case "!n":
+                window.location.href = "https://www.google.fr/#q=" + search + "&safe=active&tbm=nws";
+                break;
+            // Google images
+            case "!i":
+                window.location.href = "https://www.google.fr/#q=" + search + "&safe=active&tbm=isch";
+                break;
+            // Google maps
+            case "!m":
+                window.location.href = "https://www.google.fr/maps/search/" + search;
+                break;
+            // Reddit
+            case "/r":
+                window.location.href = "https://www.reddit.com/r/" + search;
+                break;
+            default:
+                window.location.href = "https://www.google.fr/#safe=on&q=" + query;
+        }
     }
 </script>
 </html>

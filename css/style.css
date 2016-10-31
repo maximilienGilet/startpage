@@ -1,0 +1,47 @@
+html{
+    background-color: #f5f6f7;
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 240%;
+    font-size: 14px;
+}
+
+.container-fluid{
+    margin-top:6em;
+}
+
+.center{
+    text-align: center;
+}
+
+.search input{
+    width: 80%;
+    margin-top: 3em;
+    font-size: 16px;
+    border-radius: 3px;
+    border: 1px solid #bbb;
+    padding: 1.2rem;
+    position: relative;
+}
+
+.search input:focus{
+    outline:none;
+    box-shadow: 0 0 0 1px #333;
+}
+
+.item{
+    /*padding:2rem;*/
+    border: 1px solid #bbb;
+    text-align: center;
+    font-size:24px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.item .label{
+    vertical-align: text-bottom;
+}
+
+.item.youtube{
+    background-color: #e74c3c;
+    color: #fff;
+}

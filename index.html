@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <title>Startpage</title>
+</head>
+<body>
+<h1 class="center">
+    ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄<br>
+    █░░░░░░░░▀█▄▀▄▀██████░▀█▄▀▄▀██████<br>
+    ░░░░ ░░░░░░░▀█▄█▄███▀░░░ ▀█▄█▄███<br>
+    <br>
+    <span class="search"><input id="searchbox" type="text" placeholder="What to deal with ?" autofocus></span>
+</h1>
+</body>
+
+<!-- Search script -->
+<script>
+    var searchbox = document.querySelector('#searchbox');
+    searchbox.addEventListener('keypress', function (e) {
+        var key = e.which || e.keyCode;
+        if (key === 13) { // 13 is enter
+            search(searchbox.value);
+        }
+    });
+
+    function search(query) {
+        window.location.href = "https://www.google.fr/#safe=on&q=" + query;
+    }
+</script>
+</html>
